@@ -34,7 +34,7 @@ const generateNoteDOM = (note) => {
     if (note.title.length > 0){
         textEl.textContent = note.title;
     } else {
-        textEl.textContent = 'Unnamed note';
+        textEl.textContent = 'Ghi chú không đặt tên';
     }
     textEl.classList.add('list-item__title')
     noteEl.appendChild(textEl);
@@ -107,7 +107,7 @@ const renderNotes = (notes, filters) => {
         })
     } else {
         const emptyMessage = document.createElement('p')
-        emptyMessage.textContent = 'No notes to show'
+        emptyMessage.textContent = 'Không có ghi chú nào'
         emptyMessage.classList.add('empty-message')
         notesEl.appendChild(emptyMessage)
     }
